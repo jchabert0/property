@@ -4,7 +4,7 @@
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item">
-          <strong>Jérémie CHABERT</strong>
+          <strong>{{itemOne}}</strong>
         </a>
         <a
           role="button"
@@ -21,9 +21,12 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="#about">Qui sommes-nous ?</a>
-          <a class="navbar-item" href="#properties">Nos biens</a>
-          <a class="navbar-item" href="#contact">Contact</a>
+          <a
+            class="navbar-item"
+            v-for="(item, index) in items"
+            :key="index"
+            :href="item.url"
+          >{{item.title}}</a>
         </div>
       </div>
     </nav>
@@ -31,7 +34,28 @@
 </template>
 
 <script>
-export default {name: "Navbar"};
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      itemOne: "Jérémie CHABERT",
+      items: [
+        {
+          title: "About",
+          url: "#about"
+        },
+        {
+          title: "Nos biens",
+          url: "#properties"
+        },
+        {
+         title: "Contact",
+          url: "#contact"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped>
