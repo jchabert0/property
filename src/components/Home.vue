@@ -1,11 +1,7 @@
 <template>
   <div class="home">
-    <section class="hero">
-      <Navbar></Navbar>
-      <div class="hero-body">
-        <div class="container"></div>
-      </div>
-    </section>
+    <Navbar></Navbar>
+    <Header></Header>
 
     <section class="section">
       <svg class="svg-icon box" viewBox="0 0 20 20">
@@ -94,6 +90,7 @@
 
 <script>
 import Navbar from "./Navbar.vue";
+import Header from "./Header.vue";
 
 export default {
   name: "Home",
@@ -122,7 +119,8 @@ export default {
     };
   },
   components: {
-    Navbar
+    Navbar,
+    Header
   },
   methods: {
     goTodetail(propertyId) {
@@ -137,24 +135,6 @@ export default {
 .text-style {
   color: #ff8c3b;
   font-weight: bolder;
-}
-.navbar {
-  background-color: white;
-  opacity: 0.7;
-}
-.navbar-item {
-  color: #ff8c3b;
-  transition: 0.2s;
-}
-.navbar-item:hover {
-  color: #ff8c3b;
-}
-.hero {
-  background-image: url("../assets/img-property-2.jpg");
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .svg-icon {
   position: absolute;
