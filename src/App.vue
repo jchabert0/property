@@ -13,4 +13,7 @@ export default {
 
 <style>
 @import 'bulma/css/bulma.css';
+#app {
+  background-color: #ffffff;
+}
 </style>

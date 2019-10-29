@@ -41,7 +41,7 @@ export default {
       itemOne: "Jérémie CHABERT",
       items: [
         {
-          title: "About",
+          title: "A propos",
           url: "#about"
         },
         {
@@ -49,7 +49,7 @@ export default {
           url: "#properties"
         },
         {
-         title: "Contact",
+         title: "Contactez-nous",
           url: "#contact"
         }
       ]
