@@ -1,19 +1,18 @@
 <template>
   <section class="hero">
-      <div class="hero-body">
-        <div class="container"></div>
-      </div>
-    </section>
+    <div class="hero-body">
+      <div class="container"></div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'Header',
-  data () {
-    return {
-    }
+  name: "Header",
+  data() {
+    return {};
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
