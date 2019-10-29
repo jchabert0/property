@@ -1,32 +1,7 @@
 <template>
   <div class="home">
     <section class="hero">
-      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            <strong>Jérémie CHABERT</strong>
-          </a>
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="#about">Qui sommes-nous ?</a>
-            <a class="navbar-item" href="#properties">Nos biens</a>
-            <a class="navbar-item" href="#contact">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <Navbar></Navbar>
       <div class="hero-body">
         <div class="container"></div>
       </div>
@@ -91,7 +66,7 @@
       <div class="container">
         <div class="columns is-vcentered is-centered">
           <div class="column" v-for="(property, index) in properties" :key="index">
-            <div class="box"  :style="{ 'background-image': 'url(' + property.image + ')' }">
+            <div class="box" :style="{ 'background-image': 'url(' + property.image + ')' }">
               <h1 class="title">{{ property.title }}</h1>
               <h2 class="subtitle">{{ property.description }}</h2>
               <button class="button is-primary" @click="goTodetail(property.id)">button</button>
@@ -108,7 +83,9 @@
           <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
           <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
           is licensed
-          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          <a
+            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY NC SA 4.0</a>.
         </p>
       </div>
     </footer>
@@ -116,16 +93,36 @@
 </template>
 
 <script>
+import Navbar from "./Navbar.vue";
+
 export default {
   name: "Home",
   data() {
     return {
       properties: [
-        { id: 1, title: "property-1", description: "description", image: "../assets/img-property-4.jpg" },
-        { id: 2, title: "property-2", description: "description", image: "../assets/img-property-4.jpg" },
-        { id: 3, title: "property-3", description: "description", image: "../assets/img-property-4.jpg" }
+        {
+          id: 1,
+          title: "property-1",
+          description: "description",
+          image: "../assets/img-property-4.jpg"
+        },
+        {
+          id: 2,
+          title: "property-2",
+          description: "description",
+          image: "../assets/img-property-4.jpg"
+        },
+        {
+          id: 3,
+          title: "property-3",
+          description: "description",
+          image: "../assets/img-property-4.jpg"
+        }
       ]
     };
+  },
+  components: {
+    Navbar
   },
   methods: {
     goTodetail(propertyId) {
