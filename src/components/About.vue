@@ -2,16 +2,16 @@
   <section class="section" id="about">
     <div class="container">
       <div class="columns is-vcentered">
-        <div class="column">
+        <div class="column has-text-centered">
           <div class="img-div">
-            <figure class="image is-16by9 img">
+            <figure class="image is-16by9 img" id="img">
               <img src="../assets/img-property-3.jpg" />
             </figure>
           </div>
+          <button class="button is-rounded" id="btn-property" @mouseenter="mouseenter()" @mouseleave="mouseleave()">Découvrir nos biens</button>
         </div>
         <div class="column has-text-centered">
-          <button class="button is-rounded">Contactez-nous</button>
-          <!-- Réussir le hover qui change l'image -->
+          <button class="button is-rounded" id="btn-contact">Contactez-nous</button>
           <p class="text">
             Lorem ipsum
             <span>dolor sit</span> amet consectetur adipisicing elit. Sint eum illo et nihil ea necessitatibus dolor
@@ -28,6 +28,14 @@ export default {
   name: "About",
   data() {
     return {};
+  },
+  methods: {
+    mouseenter() {
+      document.getElementById('img').classList.add('img-hover')
+    },
+    mouseleave() {
+      document.getElementById('img').classList.remove('img-hover')
+    }
   }
 };
 </script>
@@ -37,29 +45,26 @@ export default {
 .button {
   font-weight: bold;
   border: none;
-  margin-bottom: 20px;
   background-color: #ff8c3b;
   color: #ffffff;
 }
-.button:hover ~ .text {
+#btn-contact {
+  margin-bottom: 20px;
+}
+#btn-property {
+  margin-top: 42px;
+}
+#btn-contact:hover ~ .text {
   border-bottom: 2px solid #ffe5d2;
   border-right: 2px solid #ffe5d2;
   border-left: transparent;
   transform: translateX(-5px);
 }
-.button:hover ~ .img {
-  -ms-transform: rotate(-3deg);
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-}
 .text {
   padding: 10px;
   border-right: transparent;
   border-bottom: transparent;
-  border-left: 2px solid #ffe5d2;
+  border-left: 4px solid #ffe5d2;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -76,5 +81,13 @@ span {
   box-shadow: 12px 12px 0px 0px #ffe5d2;
   -webkit-box-shadow: 12px 12px 0px 0px #ffe5d2;
   -moz-box-shadow: 12px 12px 0px 0px #ffe5d2;
+}
+.img-hover {
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 </style>
