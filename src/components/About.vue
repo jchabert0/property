@@ -75,16 +75,16 @@ export default {
 }
 #btn-contact:hover ~ .text {
   border-bottom: 2px solid #ffe5d2;
-  border-right: 2px solid #ffe5d2;
-  border-left: transparent;
-  transform: translateX(-5px);
+  border-left: 2px solid #ffe5d2;
+  border-right: transparent;
+  transform: translateX(5px);
 }
 .text {
   background-color: #f8f8f8;
   padding: 10px;
-  border-right: transparent;
+  border-left: transparent;
   border-bottom: transparent;
-  border-left: 4px solid #ffe5d2;
+  border-right: 4px solid #ffe5d2;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
