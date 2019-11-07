@@ -2,8 +2,8 @@
       <template>
   <div>
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item">
+      <div class="navbar-brand ">
+        <a class="navbar-item ">
           <strong>{{itemOne}}</strong>
         </a>
         <a

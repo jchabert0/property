@@ -2,7 +2,7 @@
   <section class="section" id="about">
     <div class="container">
       <div class="columns is-vcentered">
-        <div class="column has-text-centered">
+        <div class="column has-text-centered about-section">
           <div class="img-div">
             <figure class="image is-16by9 img" id="img">
               <img src="../assets/img-property-3.jpg" />
@@ -10,12 +10,28 @@
           </div>
           <button class="button is-rounded" id="btn-property" @mouseenter="mouseenter()" @mouseleave="mouseleave()">Découvrir nos biens</button>
         </div>
-        <div class="column has-text-centered">
+        <div class="column has-text-centered about-section">
           <button class="button is-rounded" id="btn-contact">Contactez-nous</button>
           <p class="text">
-            Lorem ipsum
-            <span>dolor sit</span> amet consectetur adipisicing elit. Sint eum illo et nihil ea necessitatibus dolor
-            <span>dignissimos provident sed recusandae</span> vero, repudiandae repellat nisi quo ipsum quia nesciunt accusamus aspernatur!
+            Lorem ipsum 
+            <span> dolor sit 
+            </span> 
+            amet consectetur adipisicing elit. Sint eum illo et nihil ea necessitatibus dolor 
+            <span> 
+            dignissimos provident sed recusandae
+            </span> 
+            vero, repudiandae repellat nisi quo ipsum quia nesciunt accusamus aspernatur!
+            Lorem ipsum  dolor sit 
+            <span> amet consectetur adipisicing
+            </span> 
+            elit. Sint eum illo et nihil ea necessitatibus dolor 
+            <span> 
+            dignissimos 
+            </span> 
+            provident sed recusandae vero, 
+            <span>
+              repudiandae
+            </span> repellat nisi quo ipsum quia nesciunt accusamus aspernatur!
           </p>
         </div>
       </div>
@@ -47,6 +63,9 @@ export default {
   border: none;
   background-color: #ff8c3b;
   color: #ffffff;
+  -webkit-box-shadow: 0px 3px 10px 0px rgb(194, 194, 194);
+  -moz-box-shadow: 0px 3px 10px 0px rgb(194, 194, 194);
+  box-shadow: 0px 3px 10px 0px rgb(194, 194, 194);
 }
 #btn-contact {
   margin-bottom: 20px;
@@ -61,6 +80,7 @@ export default {
   transform: translateX(-5px);
 }
 .text {
+  background-color: #f8f8f8;
   padding: 10px;
   border-right: transparent;
   border-bottom: transparent;
@@ -89,5 +109,8 @@ span {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+}
+.about-section {
+  margin-top: 3rem;
 }
 </style>
