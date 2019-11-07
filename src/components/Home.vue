@@ -24,37 +24,37 @@
 </template>
 
 <script>
-import Navbar from "./Navbar.vue";
-import Header from "./Header.vue";
-import Logo from "./Logo.vue";
-import About from "./About.vue";
-import Footer from "./Footer.vue";
+import Navbar from './Navbar.vue'
+import Header from './Header.vue'
+import Logo from './Logo.vue'
+import About from './About.vue'
+import Footer from './Footer.vue'
 
 export default {
-  name: "Home",
-  data() {
+  name: 'Home',
+  data () {
     return {
       properties: [
         {
           id: 1,
-          title: "property-1",
-          description: "description",
-          image: "../assets/img-property-4.jpg"
+          title: 'property-1',
+          description: 'description',
+          image: '../assets/img-property-4.jpg'
         },
         {
           id: 2,
-          title: "property-2",
-          description: "description",
-          image: "../assets/img-property-4.jpg"
+          title: 'property-2',
+          description: 'description',
+          image: '../assets/img-property-4.jpg'
         },
         {
           id: 3,
-          title: "property-3",
-          description: "description",
-          image: "../assets/img-property-4.jpg"
+          title: 'property-3',
+          description: 'description',
+          image: '../assets/img-property-4.jpg'
         }
       ]
-    };
+    }
   },
   components: {
     Navbar,
@@ -64,11 +64,11 @@ export default {
     Footer
   },
   methods: {
-    goTodetail(propertyId) {
-      this.$router.push({ name: "Property", params: { id: propertyId } });
+    goTodetail (propertyId) {
+      this.$router.push({ name: 'Property', params: { id: propertyId } })
     }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

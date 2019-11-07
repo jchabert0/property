@@ -35,27 +35,27 @@
 
 <script>
 export default {
-  name: "Navbar",
-  data() {
+  name: 'Navbar',
+  data () {
     return {
-      itemOne: "Jérémie CHABERT",
+      itemOne: 'Jérémie CHABERT',
       items: [
         {
-          title: "A propos",
-          url: "#about"
+          title: 'A propos',
+          url: '#about'
         },
         {
-          title: "Nos biens",
-          url: "#properties"
+          title: 'Nos biens',
+          url: '#properties'
         },
         {
-         title: "Contactez-nous",
-          url: "#contact"
+          title: 'Contactez-nous',
+          url: '#contact'
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

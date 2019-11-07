@@ -25,19 +25,19 @@
 
 <script>
 export default {
-  name: "About",
-  data() {
-    return {};
+  name: 'About',
+  data () {
+    return {}
   },
   methods: {
-    mouseenter() {
+    mouseenter () {
       document.getElementById('img').classList.add('img-hover')
     },
-    mouseleave() {
+    mouseleave () {
       document.getElementById('img').classList.remove('img-hover')
     }
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
